@@ -1,0 +1,61 @@
+@layer base {
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  html {
+    line-height: 1.5;
+    -webkit-text-size-adjust: 100%;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    min-height: 100vh;
+    text-rendering: optimizeSpeed;
+    font-family: var(--font-sans);
+    background-color: var(--color-page);
+    color: var(--color-content);
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+
+  /* Cairo font for RTL (Arabic) — triggered by dir attribute set on <html> */
+  [dir='rtl'] body {
+    font-family: var(--font-arabic);
+  }
+
+  img,
+  picture,
+  video,
+  canvas,
+  svg {
+    display: block;
+    max-width: 100%;
+  }
+
+  input,
+  button,
+  textarea,
+  select {
+    font: inherit;
+  }
+
+  button {
+    border: none;
+    background: none;
+    cursor: pointer;
+  }
+
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  ul,
+  ol {
+    list-style: none;
+  }
+}
