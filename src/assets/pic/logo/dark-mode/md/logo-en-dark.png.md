@@ -1,0 +1,1 @@
+The image shows a logo that combines the number 1 and the letter K, creating a stylized "1K". Below this, the name "Kewan" is displayed. The logo features a gradient from white to teal, with the "1" being mostly white and the "K" mostly teal. A small, stylized star is in the bottom right corner of the image.

@@ -1,0 +1,48 @@
+/* ─── Semantic Design Tokens ─────────────────────────────────────────────── */
+
+/* Light mode (default) */
+:root {
+  --font-sans: 'Inter', sans-serif;
+  --font-arabic: 'Cairo', sans-serif;
+
+  --color-brand: #16A38F;
+  --color-brand-hover: #138D7E;
+
+  --color-page: #F8F9FA;
+  --color-surface: #FFFFFF;
+
+  --color-content: #1A1C1E;
+  --color-muted: #6B7280;
+  --color-border-ui: #E5E7EB;
+}
+
+/* Dark mode — toggled by .dark class on <html> */
+.dark {
+  --color-brand: #16A38F;
+  --color-brand-hover: #2DD4BF;
+
+  --color-page: #0F172A;
+  --color-surface: #1E293B;
+
+  --color-content: #F3F4F6;
+  --color-muted: #9CA3AF;
+  --color-border-ui: #334155;
+}
+
+/* ─── Tailwind v4 @theme — expose tokens as utility classes ──────────────── */
+/* `inline` preserves var() references so dark-mode switching works at runtime */
+@theme inline {
+  --color-brand: var(--color-brand);
+  --color-brand-hover: var(--color-brand-hover);
+
+  --color-bg-page: var(--color-page);
+  --color-bg-surface: var(--color-surface);
+
+  --color-text-main: var(--color-content);
+  --color-text-muted: var(--color-muted);
+
+  --color-border-main: var(--color-border-ui);
+
+  --font-sans: var(--font-sans);
+  --font-arabic: var(--font-arabic);
+}

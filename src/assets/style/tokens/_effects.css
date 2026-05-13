@@ -1,0 +1,99 @@
+/* ─── Shadows ─────────────────────────────────────────────────────────────── */
+
+:root {
+  /* Light mode — soft shadows for premium minimal feel */
+  --shadow-xs:    0 1px 2px rgba(0, 0, 0, 0.04);
+  --shadow-sm:    0 1px 3px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.04);
+  --shadow-md:    0 4px 6px rgba(0, 0, 0, 0.07), 0 2px 4px rgba(0, 0, 0, 0.05);
+  --shadow-lg:    0 10px 15px rgba(0, 0, 0, 0.08), 0 4px 6px rgba(0, 0, 0, 0.05);
+  --shadow-xl:    0 20px 25px rgba(0, 0, 0, 0.09), 0 8px 10px rgba(0, 0, 0, 0.05);
+  --shadow-2xl:   0 25px 50px rgba(0, 0, 0, 0.12);
+  --shadow-inner: inset 0 2px 4px rgba(0, 0, 0, 0.06);
+  --shadow-none:  none;
+
+  /* Brand glow — use sparingly for focus/active CTAs */
+  --shadow-brand: 0 0 0 3px rgba(22, 163, 143, 0.25);
+}
+
+/* Dark mode — use border + background lightness for depth, not heavy shadows */
+.dark {
+  --shadow-xs:    0 1px 2px rgba(0, 0, 0, 0.25);
+  --shadow-sm:    0 1px 3px rgba(0, 0, 0, 0.3), 0 1px 2px rgba(0, 0, 0, 0.2);
+  --shadow-md:    0 4px 6px rgba(0, 0, 0, 0.3), 0 2px 4px rgba(0, 0, 0, 0.2);
+  --shadow-lg:    0 10px 15px rgba(0, 0, 0, 0.35), 0 4px 6px rgba(0, 0, 0, 0.2);
+  --shadow-xl:    0 20px 25px rgba(0, 0, 0, 0.4), 0 8px 10px rgba(0, 0, 0, 0.2);
+  --shadow-2xl:   0 25px 50px rgba(0, 0, 0, 0.5);
+  --shadow-inner: inset 0 2px 4px rgba(0, 0, 0, 0.3);
+
+  --shadow-brand: 0 0 0 3px rgba(22, 163, 143, 0.35);
+}
+
+/* ─── Border Radius ───────────────────────────────────────────────────────── */
+:root {
+  --radius-none: 0px;
+  --radius-sm:   4px;
+  --radius-md:   8px;
+  --radius-lg:   12px;
+  --radius-xl:   16px;
+  --radius-2xl:  24px;
+  --radius-3xl:  32px;
+  --radius-full: 9999px;
+}
+
+/* ─── Motion / Transitions ────────────────────────────────────────────────── */
+:root {
+  /* Durations */
+  --duration-instant: 0ms;
+  --duration-fast:    100ms;
+  --duration-normal:  200ms;
+  --duration-slow:    300ms;
+  --duration-slower:  500ms;
+
+  /* Easing functions */
+  --ease-linear:  linear;
+  --ease-in:      cubic-bezier(0.4, 0, 1, 1);
+  --ease-out:     cubic-bezier(0, 0, 0.2, 1);
+  --ease-in-out:  cubic-bezier(0.4, 0, 0.2, 1);
+  --ease-spring:  cubic-bezier(0.34, 1.56, 0.64, 1);
+  --ease-back:    cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+  /* Semantic transitions */
+  --transition-color:     color var(--duration-normal) var(--ease-in-out),
+                          background-color var(--duration-normal) var(--ease-in-out),
+                          border-color var(--duration-normal) var(--ease-in-out);
+  --transition-transform: transform var(--duration-normal) var(--ease-out);
+  --transition-opacity:   opacity var(--duration-normal) var(--ease-in-out);
+  --transition-shadow:    box-shadow var(--duration-normal) var(--ease-in-out);
+  --transition-all:       all var(--duration-normal) var(--ease-in-out);
+}
+
+/* Tailwind v4 — expose effects as utilities */
+@theme {
+  --shadow-xs:    var(--shadow-xs);
+  --shadow-sm:    var(--shadow-sm);
+  --shadow-md:    var(--shadow-md);
+  --shadow-lg:    var(--shadow-lg);
+  --shadow-xl:    var(--shadow-xl);
+  --shadow-2xl:   var(--shadow-2xl);
+  --shadow-inner: var(--shadow-inner);
+  --shadow-none:  var(--shadow-none);
+  --shadow-brand: var(--shadow-brand);
+
+  --radius-none: var(--radius-none);
+  --radius-sm:   var(--radius-sm);
+  --radius-md:   var(--radius-md);
+  --radius-lg:   var(--radius-lg);
+  --radius-xl:   var(--radius-xl);
+  --radius-2xl:  var(--radius-2xl);
+  --radius-3xl:  var(--radius-3xl);
+  --radius-full: var(--radius-full);
+
+  --duration-fast:   var(--duration-fast);
+  --duration-normal: var(--duration-normal);
+  --duration-slow:   var(--duration-slow);
+
+  --ease-in:     var(--ease-in);
+  --ease-out:    var(--ease-out);
+  --ease-in-out: var(--ease-in-out);
+  --ease-spring: var(--ease-spring);
+}

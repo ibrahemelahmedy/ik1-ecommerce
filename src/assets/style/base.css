@@ -1,0 +1,118 @@
+/* ─── CSS Reset & Base Layer ─────────────────────────────────────────────── */
+
+@layer base {
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  html {
+    line-height: var(--leading-normal);
+    -webkit-text-size-adjust: 100%;
+    scroll-behavior: smooth;
+    /* Anti-aliasing for crisp text */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    min-height: 100dvh;
+    text-rendering: optimizeLegibility;
+    font-family: var(--font-sans);
+    font-size: var(--text-base);
+    background-color: var(--bg-page);
+    color: var(--text-primary);
+    /* Smooth theme transitions */
+    transition: var(--transition-color);
+  }
+
+  /* Cairo for Arabic — triggered by dir attribute on <html> */
+  [dir='rtl'] body {
+    font-family: var(--font-arabic);
+    line-height: var(--leading-relaxed);
+  }
+
+  /* ── Media Elements ─────────────────────────────────────────────────────── */
+  img,
+  picture,
+  video,
+  canvas,
+  svg {
+    display: block;
+    max-width: 100%;
+  }
+
+  img {
+    height: auto;
+  }
+
+  /* ── Form Elements ──────────────────────────────────────────────────────── */
+  input,
+  button,
+  textarea,
+  select {
+    font: inherit;
+  }
+
+  button {
+    border: none;
+    background: none;
+    cursor: pointer;
+  }
+
+  /* ── Links ──────────────────────────────────────────────────────────────── */
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  /* ── Lists ──────────────────────────────────────────────────────────────── */
+  ul,
+  ol {
+    list-style: none;
+  }
+
+  /* ── Headings — base scale using tokens ────────────────────────────────── */
+  h1 { font-size: var(--text-4xl); font-weight: var(--font-bold);     line-height: var(--leading-tight); }
+  h2 { font-size: var(--text-3xl); font-weight: var(--font-semibold); line-height: var(--leading-tight); }
+  h3 { font-size: var(--text-2xl); font-weight: var(--font-semibold); line-height: var(--leading-snug);  }
+  h4 { font-size: var(--text-xl);  font-weight: var(--font-medium);   line-height: var(--leading-snug);  }
+  h5 { font-size: var(--text-lg);  font-weight: var(--font-medium);   line-height: var(--leading-normal);}
+  h6 { font-size: var(--text-md);  font-weight: var(--font-medium);   line-height: var(--leading-normal);}
+
+  /* ── Focus — global accessible focus ring ──────────────────────────────── */
+  :focus-visible {
+    outline: 2px solid var(--border-focus);
+    outline-offset: 2px;
+  }
+
+  /* ── Scrollbar — subtle system-aware ───────────────────────────────────── */
+  :root {
+    scrollbar-width: thin;
+    scrollbar-color: var(--border-strong) transparent;
+  }
+
+  /* ── Selection ──────────────────────────────────────────────────────────── */
+  ::selection {
+    background-color: var(--interactive-primary-muted);
+    color: var(--text-primary);
+  }
+
+  /* ── Reduced motion ─────────────────────────────────────────────────────── */
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+
+    html {
+      scroll-behavior: auto;
+    }
+  }
+}

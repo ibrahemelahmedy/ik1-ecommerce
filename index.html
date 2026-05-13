@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#16A38F" />
+    <link rel="icon" href="/favicon.ico" />
+    <title>Kewan — متجر إلكتروني</title>
+
+    <!-- Prevent flash of wrong theme (runs synchronously before first paint) -->
+    <script>
+      (function () {
+        var stored = localStorage.getItem('kewan-theme')
+        var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (stored === 'dark' || (!stored && prefersDark)) {
+          document.documentElement.classList.add('dark')
+        }
+        var locale = localStorage.getItem('kewan-locale') || 'ar'
+        document.documentElement.dir  = locale === 'ar' ? 'rtl' : 'ltr'
+        document.documentElement.lang = locale
+      })()
+    </script>
+
+    <!-- Google Fonts — Inter (EN/LTR) + Cairo (AR/RTL) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div id="app"></div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

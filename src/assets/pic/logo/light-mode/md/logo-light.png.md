@@ -1,0 +1,1 @@
+The image shows a stylized logo of the characters "1" and "K" layered together, with a transparent checkered background where the characters do not overlap. The "1" is black, and the "K" is teal.

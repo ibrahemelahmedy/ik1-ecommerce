@@ -1,0 +1,7 @@
+/* ─── Design Token Index ─────────────────────────────────────────────────── */
+/* Import order matters: primitives → semantic → effects                       */
+
+@import './_colors.css';
+@import './_typography.css';
+@import './_spacing.css';
+@import './_effects.css';

@@ -1,0 +1,13 @@
+/* ─── Kewan Design System Entry Point ────────────────────────────────────── */
+/* Import order: Tailwind engine → tokens → base reset → custom utilities      */
+
+@import "tailwindcss";
+
+/* Design tokens (colors, typography, spacing, effects) */
+@import './tokens/index.css';
+
+/* CSS reset + base element styles */
+@import './base.css';
+
+/* Custom Tailwind utility layer extensions */
+@import './utilities.css';
