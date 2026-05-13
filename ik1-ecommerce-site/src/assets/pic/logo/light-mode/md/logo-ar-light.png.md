@@ -1,1 +1,0 @@
-A logo displaying the numeral "1" in black next to the letter "K" in teal, and below them the Arabic word "كيوان" in teal and black.

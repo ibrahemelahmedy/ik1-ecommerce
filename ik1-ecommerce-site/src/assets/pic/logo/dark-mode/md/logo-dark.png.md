@@ -1,1 +1,0 @@
-The image is of a logo that combines the number '1' with the letter 'K'. The '1' is shaded in grey and white while the 'K' is turquoise. The bottom right corner of the image contains a faint outline of a star symbol.

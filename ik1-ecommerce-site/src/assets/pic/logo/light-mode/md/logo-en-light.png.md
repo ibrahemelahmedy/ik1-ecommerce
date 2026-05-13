@@ -1,1 +1,0 @@
-A logo featuring the number 1 in black, a stylized letter K in a teal gradient, and the word "Kewan" below, also in a teal gradient.

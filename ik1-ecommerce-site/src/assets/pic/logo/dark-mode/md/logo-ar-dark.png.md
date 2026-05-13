@@ -1,1 +1,0 @@
-A logo consisting of the number "1" and the letter "K" stacked on top of the word "کیوان" in Arabic script, all in shades of white and teal.
